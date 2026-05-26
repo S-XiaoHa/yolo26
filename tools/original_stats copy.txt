@@ -1,0 +1,42 @@
+Traffic Light Dataset Statistics (Original Data, Filtered Classes Only)
+New ID   Class Name                     Annotation Count
+-------------------------------------------------------
+0        round_black                    4634           
+1        round_red                      17164          
+2        round_yellow                   1227           
+3        round_green                    19315          
+4        up_black                       2              
+5        up_red                         797            
+6        up_yellow                      43             
+7        up_green                       854            
+8        down_black                     0              
+9        down_red                       1              
+10       down_yellow                    0              
+11       down_green                     11             
+12       left_black                     174            
+13       left_red                       9836           
+14       left_yellow                    387            
+15       left_green                     5188           
+16       right_black                    0              
+17       right_red                      416            
+18       right_yellow                   15             
+19       right_green                    2109           
+20       turn_around_black              0              
+21       turn_around_red                0              
+22       turn_around_yellow             0              
+23       turn_around_green              31             
+24       prohibit_black                 0              
+25       prohibit_red                   0              
+26       prohibit_yellow                0              
+27       prohibit_green                 0              
+28       countdown_black                3178           
+29       countdown_red                  11197          
+30       countdown_yellow               401            
+31       countdown_green                11478          
+32       script_black                   597            
+33       script_red                     9054           
+34       script_yellow                  2              
+35       script_green                   7781           
+36       unknown                        22214          
+-------------------------------------------------------
+Total annotations (kept): 128106

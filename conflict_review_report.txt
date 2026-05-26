@@ -1,0 +1,557 @@
+📊 数据集标签冲突审查报告
+扫描目录: /home/jzyh/xbzl/traffic_light/data_v1_filtered
+受影响文件数: 77 个
+发现冲突对数: 80 对
+说明: 请根据此报告，使用标注工具或直接修改对应 txt 文件删除错误的框。
+
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763110420.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 高度重合 (IoU) (IoU: 0.9371, IoM: 0.973)
+  A 框: Line 1: [left_green] 8 0.613281 0.282878 0.046354 0.024089
+  B 框: Line 4: [left_green] 8 0.613542 0.283529 0.046875 0.024089
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763111340.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 高度重合 (IoU) (IoU: 0.9394, IoM: 1.0)
+  A 框: Line 2: [left_red] 6 0.518229 0.353190 0.029167 0.014974
+  B 框: Line 4: [left_red] 6 0.517969 0.352865 0.028646 0.014323
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763280500.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 高度重合 (IoU) (IoU: 0.9189, IoM: 1.0)
+  A 框: Line 2: [round_red] 0 0.476042 0.417643 0.007292 0.024089
+  B 框: Line 3: [round_red] 0 0.476042 0.417318 0.007292 0.022135
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763107062.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 嵌套包含 (IoM) (IoU: 0.8499, IoM: 0.9444)
+  A 框: Line 3: [left_red] 6 0.449740 0.388672 0.023438 0.011719
+  B 框: Line 4: [left_yellow] 7 0.449740 0.387695 0.023438 0.012370
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763280326.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 高度重合 (IoU) (IoU: 1.0, IoM: 1.0)
+  A 框: Line 3: [round_red] 0 0.496094 0.405599 0.008854 0.029948
+  B 框: Line 4: [round_red] 0 0.496094 0.405599 0.008854 0.029948
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763280975.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 嵌套包含 (IoM) (IoU: 0.8528, IoM: 0.9333)
+  A 框: Line 2: [right_red] 9 0.438802 0.429362 0.019271 0.009766
+  B 框: Line 4: [round_red] 0 0.439063 0.428711 0.018750 0.009766
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763277170.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 高度重合 (IoU) (IoU: 0.9779, IoM: 0.9999)
+  A 框: Line 3: [round_red] 0 0.514740 0.425773 0.019287 0.010207
+  B 框: Line 4: [round_yellow] 1 0.514686 0.425798 0.019392 0.010380
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763280334.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 高度重合 (IoU) (IoU: 1.0, IoM: 1.0)
+  A 框: Line 3: [round_red] 0 0.496094 0.405599 0.008854 0.029948
+  B 框: Line 4: [round_red] 0 0.496094 0.405599 0.008854 0.029948
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763279664.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 高度重合 (IoU) (IoU: 0.9233, IoM: 0.9706)
+  A 框: Line 3: [left_yellow] 7 0.259375 0.201172 0.035417 0.105469
+  B 框: Line 4: [round_yellow] 1 0.260156 0.201172 0.034896 0.109375
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763604829.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 嵌套包含 (IoM) (IoU: 0.769, IoM: 0.909)
+  A 框: Line 1: [round_yellow] 1 0.522917 0.422201 0.006250 0.018880
+  B 框: Line 2: [round_red] 0 0.522135 0.422201 0.005729 0.018880
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763111645.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 嵌套包含 (IoM) (IoU: 0.8323, IoM: 1.0)
+  A 框: Line 5: [left_green] 8 0.419792 0.411784 0.020833 0.011068
+  B 框: Line 6: [left_green] 8 0.419010 0.411784 0.022396 0.012370
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/1750420709.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 嵌套包含 (IoM) (IoU: 0.2132, IoM: 1.0)
+  A 框: Line 1: [left_green] 8 0.487500 0.497396 0.009896 0.006510
+  B 框: Line 2: [round_green] 2 0.488672 0.497396 0.002344 0.005859
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763603174.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 高度重合 (IoU) (IoU: 0.9787, IoM: 0.9928)
+  A 框: Line 3: [round_green] 2 0.246615 0.166667 0.029687 0.091146
+  B 框: Line 4: [up_green] 5 0.246615 0.165690 0.029687 0.090495
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763605232.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 嵌套包含 (IoM) (IoU: 0.238, IoM: 1.0)
+  A 框: Line 1: [round_red] 0 0.477865 0.412109 0.017188 0.009115
+  B 框: Line 3: [round_red] 0 0.479687 0.413086 0.005208 0.007161
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1752730108.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 嵌套包含 (IoM) (IoU: 0.2334, IoM: 1.0)
+  A 框: Line 2: [round_green] 2 0.519792 0.487955 0.002604 0.007812
+  B 框: Line 3: [round_green] 2 0.520052 0.487793 0.002083 0.002279
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763108500.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 高度重合 (IoU) (IoU: 0.9048, IoM: 0.95)
+  A 框: Line 1: [round_red] 0 0.383073 0.382161 0.025521 0.013021
+  B 框: Line 3: [left_red] 6 0.383073 0.381510 0.025521 0.013021
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763106145.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 高度重合 (IoU) (IoU: 0.9714, IoM: 1.0)
+  A 框: Line 3: [left_red] 6 0.472135 0.421224 0.006771 0.022135
+  B 框: Line 4: [left_red] 6 0.472135 0.421549 0.006771 0.022786
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763111072.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 高度重合 (IoU) (IoU: 0.9677, IoM: 1.0)
+  A 框: Line 3: [left_red] 6 0.082292 0.378906 0.032292 0.014323
+  B 框: Line 4: [left_red] 6 0.082292 0.378906 0.031250 0.014323
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763285387.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 嵌套包含 (IoM) (IoU: 0.2379, IoM: 1.0)
+  A 框: Line 1: [round_green] 2 0.486198 0.454102 0.005729 0.005859
+  B 框: Line 2: [round_green] 2 0.481771 0.454102 0.016667 0.008464
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763109460.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 高度重合 (IoU) (IoU: 0.9691, IoM: 0.9974)
+  A 框: Line 3: [left_yellow] 7 0.652789 0.255841 0.053408 0.028404
+  B 框: Line 4: [left_red] 6 0.652716 0.255551 0.052831 0.027968
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763280315.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 高度重合 (IoU) (IoU: 1.0, IoM: 1.0)
+  A 框: Line 3: [round_red] 0 0.518490 0.414062 0.007812 0.026042
+  B 框: Line 4: [round_red] 0 0.518490 0.414062 0.007812 0.026042
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763109407.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 高度重合 (IoU) (IoU: 1.0, IoM: 1.0)
+  A 框: Line 3: [round_red] 0 0.558594 0.411133 0.014063 0.008464
+  B 框: Line 4: [round_red] 0 0.558594 0.411133 0.014063 0.008464
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763107118.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 高度重合 (IoU) (IoU: 0.9861, IoM: 1.0)
+  A 框: Line 1: [round_yellow] 1 0.554688 0.321289 0.037500 0.018880
+  B 框: Line 3: [round_red] 0 0.554948 0.321289 0.036979 0.018880
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763109358.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 高度重合 (IoU) (IoU: 0.9591, IoM: 0.9905)
+  A 框: Line 3: [round_red] 0 0.541602 0.399897 0.014502 0.008255
+  B 框: Line 4: [round_yellow] 1 0.541771 0.399829 0.014565 0.008411
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763277438.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 高度重合 (IoU) (IoU: 0.9541, IoM: 0.9765)
+  A 框: Line 2: [round_green] 2 0.430990 0.309570 0.044271 0.022786
+  B 框: Line 3: [left_green] 8 0.432031 0.309570 0.044271 0.022786
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763108008.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 高度重合 (IoU) (IoU: 0.9013, IoM: 0.9931)
+  A 框: Line 5: [round_green] 2 0.134375 0.307617 0.028125 0.095703
+  B 框: Line 6: [left_green] 8 0.133333 0.306315 0.026042 0.094401
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763290790.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 嵌套包含 (IoM) (IoU: 0.3351, IoM: 0.9667)
+  A 框: Line 1: [round_green] 2 0.660417 0.119141 0.069792 0.039062
+  B 框: Line 3: [left_green] 8 0.652865 0.120443 0.024479 0.039062
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1755516730.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 嵌套包含 (IoM) (IoU: 0.2745, IoM: 1.0)
+  A 框: Line 1: [right_green] 11 0.545964 0.469401 0.004427 0.013672
+  B 框: Line 2: [right_yellow] 10 0.546094 0.469401 0.003646 0.004557
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763108953.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 高度重合 (IoU) (IoU: 1.0, IoM: 1.0)
+  A 框: Line 2: [round_red] 0 0.491146 0.412109 0.008333 0.024740
+  B 框: Line 3: [left_yellow] 7 0.491146 0.412109 0.008333 0.024740
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763283624.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 高度重合 (IoU) (IoU: 0.9094, IoM: 0.9999)
+  A 框: Line 3: [round_green] 2 0.517188 0.415365 0.009375 0.031250
+  B 框: Line 4: [right_green] 11 0.516927 0.415365 0.009896 0.032552
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763277408.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 高度重合 (IoU) (IoU: 0.9841, IoM: 1.0)
+  A 框: Line 2: [round_green] 2 0.375000 0.348307 0.032292 0.016927
+  B 框: Line 3: [left_green] 8 0.374740 0.348307 0.032813 0.016927
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763108957.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 嵌套包含 (IoM) (IoU: 0.8236, IoM: 0.9334)
+  A 框: Line 2: [round_red] 0 0.491146 0.412760 0.008333 0.024740
+  B 框: Line 3: [left_red] 6 0.490365 0.412760 0.007812 0.024740
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763109582.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 嵌套包含 (IoM) (IoU: 0.2441, IoM: 0.9412)
+  A 框: Line 1: [round_red] 0 0.607812 0.388672 0.017708 0.022135
+  B 框: Line 3: [round_red] 0 0.608594 0.356445 0.017188 0.086589
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763107114.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 高度重合 (IoU) (IoU: 1.0, IoM: 1.0)
+  A 框: Line 2: [round_yellow] 1 0.481771 0.352214 0.030208 0.015625
+  B 框: Line 3: [left_red] 6 0.481771 0.352214 0.030208 0.015625
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763112125.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 高度重合 (IoU) (IoU: 1.0, IoM: 1.0)
+  A 框: Line 2: [round_green] 2 0.501042 0.411784 0.018750 0.009766
+  B 框: Line 3: [left_green] 8 0.501042 0.411784 0.018750 0.009766
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1753787298.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 嵌套包含 (IoM) (IoU: 0.3073, IoM: 0.9168)
+  A 框: Line 2: [round_red] 0 0.689323 0.499838 0.003125 0.009440
+  B 框: Line 3: [round_green] 2 0.689063 0.502279 0.003125 0.003255
+  --- 冲突对 #2 ---
+  🚨 冲突类型: 嵌套包含 (IoM) (IoU: 0.3749, IoM: 1.0)
+  A 框: Line 4: [round_red] 0 0.505469 0.476563 0.003646 0.010417
+  B 框: Line 5: [round_green] 2 0.505469 0.478841 0.003125 0.004557
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763281181.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 高度重合 (IoU) (IoU: 1.0, IoM: 1.0)
+  A 框: Line 1: [round_red] 0 0.549740 0.413411 0.015104 0.009115
+  B 框: Line 2: [round_red] 0 0.549740 0.413411 0.015104 0.009115
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763109690.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 高度重合 (IoU) (IoU: 0.9806, IoM: 1.0)
+  A 框: Line 2: [left_red] 6 0.642448 0.285807 0.053646 0.029948
+  B 框: Line 3: [left_red] 6 0.642448 0.285807 0.052604 0.029948
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763277409.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 高度重合 (IoU) (IoU: 0.9881, IoM: 1.0)
+  A 框: Line 2: [round_green] 2 0.388021 0.297201 0.043750 0.022786
+  B 框: Line 3: [left_green] 8 0.387760 0.297201 0.043229 0.022786
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763281313.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 高度重合 (IoU) (IoU: 0.9444, IoM: 1.0)
+  A 框: Line 2: [left_green] 8 0.468229 0.390951 0.020833 0.011068
+  B 框: Line 3: [round_green] 2 0.468229 0.391276 0.020833 0.011719
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763111126.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 高度重合 (IoU) (IoU: 0.96, IoM: 1.0)
+  A 框: Line 2: [left_red] 6 0.475000 0.431315 0.012500 0.007161
+  B 框: Line 3: [round_red] 0 0.475260 0.431315 0.013021 0.007161
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763111065.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 高度重合 (IoU) (IoU: 0.9697, IoM: 1.0)
+  A 框: Line 2: [left_red] 6 0.390365 0.423177 0.017188 0.009115
+  B 框: Line 3: [round_red] 0 0.390625 0.423177 0.016667 0.009115
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763283302.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 嵌套包含 (IoM) (IoU: 0.8908, IoM: 0.9737)
+  A 框: Line 1: [round_red] 0 0.495312 0.417318 0.008333 0.024740
+  B 框: Line 2: [round_yellow] 1 0.495052 0.417969 0.007812 0.024740
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763109361.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 嵌套包含 (IoM) (IoU: 0.8826, IoM: 0.9999)
+  A 框: Line 3: [round_yellow] 1 0.541406 0.399740 0.014063 0.007812
+  B 框: Line 4: [round_red] 0 0.541146 0.399414 0.013542 0.007161
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1753926568.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 嵌套包含 (IoM) (IoU: 0.2208, IoM: 1.0)
+  A 框: Line 1: [round_red] 0 0.800911 0.452637 0.005469 0.017904
+  B 框: Line 4: [round_red] 0 0.801432 0.452637 0.003906 0.005534
+  --- 冲突对 #2 ---
+  🚨 冲突类型: 嵌套包含 (IoM) (IoU: 0.2492, IoM: 1.0)
+  A 框: Line 2: [round_red] 0 0.676953 0.450684 0.004948 0.018555
+  B 框: Line 3: [round_red] 0 0.676823 0.450358 0.004687 0.004882
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763604230.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 高度重合 (IoU) (IoU: 0.974, IoM: 0.9952)
+  A 框: Line 1: [left_red] 6 0.557531 0.179842 0.062202 0.029434
+  B 框: Line 3: [left_green] 8 0.557172 0.179706 0.063281 0.029423
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763110355.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 嵌套包含 (IoM) (IoU: 0.8062, IoM: 0.9787)
+  A 框: Line 3: [left_red] 6 0.448958 0.262695 0.061458 0.030599
+  B 框: Line 5: [left_red] 6 0.444531 0.261393 0.070312 0.031901
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763277629.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 高度重合 (IoU) (IoU: 0.9444, IoM: 1.0)
+  A 框: Line 3: [left_red] 6 0.087500 0.259115 0.017708 0.053385
+  B 框: Line 4: [left_red] 6 0.087500 0.259115 0.018750 0.053385
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763277355.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 高度重合 (IoU) (IoU: 0.9818, IoM: 1.0)
+  A 框: Line 2: [round_green] 2 0.489844 0.101888 0.095312 0.050130
+  B 框: Line 3: [left_green] 8 0.490104 0.102214 0.095833 0.050781
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763277410.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 高度重合 (IoU) (IoU: 0.9253, IoM: 1.0)
+  A 框: Line 1: [left_green] 8 0.382031 0.201823 0.064062 0.033854
+  B 框: Line 4: [round_green] 2 0.383333 0.201172 0.066667 0.035156
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763107241.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 高度重合 (IoU) (IoU: 1.0, IoM: 1.0)
+  A 框: Line 2: [round_yellow] 1 0.525521 0.383789 0.020833 0.011068
+  B 框: Line 3: [round_red] 0 0.525521 0.383789 0.020833 0.011068
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1755517451.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 嵌套包含 (IoM) (IoU: 0.2339, IoM: 1.0)
+  A 框: Line 1: [round_red] 0 0.527995 0.465332 0.005469 0.014648
+  B 框: Line 3: [round_red] 0 0.527995 0.465006 0.004427 0.004232
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763109362.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 高度重合 (IoU) (IoU: 0.9562, IoM: 0.9939)
+  A 框: Line 3: [round_red] 0 0.541484 0.400063 0.013983 0.007597
+  B 框: Line 4: [round_yellow] 1 0.541627 0.400023 0.014099 0.007786
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763111869.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 嵌套包含 (IoM) (IoU: 0.667, IoM: 0.9785)
+  A 框: Line 3: [left_red] 6 0.661616 0.270143 0.039979 0.029076
+  B 框: Line 4: [left_red] 6 0.656199 0.269789 0.027127 0.029643
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763283079.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 嵌套包含 (IoM) (IoU: 0.5259, IoM: 0.9768)
+  A 框: Line 1: [round_green] 2 0.764844 0.011068 0.107813 0.020833
+  B 框: Line 2: [round_green] 2 0.786719 0.009766 0.067187 0.018229
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763277630.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 高度重合 (IoU) (IoU: 0.9441, IoM: 0.9762)
+  A 框: Line 3: [left_red] 6 0.194792 0.205404 0.021875 0.063151
+  B 框: Line 4: [left_red] 6 0.195312 0.205729 0.021875 0.063802
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763107310.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 高度重合 (IoU) (IoU: 1.0, IoM: 1.0)
+  A 框: Line 3: [round_red] 0 0.517188 0.407552 0.019792 0.010417
+  B 框: Line 4: [round_red] 0 0.517188 0.407552 0.019792 0.010417
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763280970.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 高度重合 (IoU) (IoU: 1.0, IoM: 1.0)
+  A 框: Line 3: [right_red] 9 0.427865 0.425456 0.017188 0.008464
+  B 框: Line 4: [round_red] 0 0.427865 0.425456 0.017188 0.008464
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763107113.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 高度重合 (IoU) (IoU: 1.0, IoM: 1.0)
+  A 框: Line 2: [round_yellow] 1 0.482031 0.366862 0.027604 0.013672
+  B 框: Line 3: [left_red] 6 0.482031 0.366862 0.027604 0.013672
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763107992.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 高度重合 (IoU) (IoU: 1.0, IoM: 1.0)
+  A 框: Line 5: [round_green] 2 0.410938 0.455729 0.005208 0.018229
+  B 框: Line 6: [round_green] 2 0.410938 0.455729 0.005208 0.018229
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763280979.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 高度重合 (IoU) (IoU: 1.0, IoM: 1.0)
+  A 框: Line 2: [right_red] 9 0.400521 0.404948 0.026042 0.011719
+  B 框: Line 4: [round_red] 0 0.400521 0.404948 0.026042 0.011719
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763112121.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 高度重合 (IoU) (IoU: 0.9707, IoM: 1.0)
+  A 框: Line 1: [left_green] 8 0.501956 0.411282 0.015328 0.007887
+  B 框: Line 3: [round_green] 2 0.501948 0.411222 0.015111 0.007766
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1752730192.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 嵌套包含 (IoM) (IoU: 0.2298, IoM: 1.0)
+  A 框: Line 3: [left_red] 6 0.520833 0.460287 0.004687 0.014323
+  B 框: Line 4: [left_red] 6 0.520703 0.460937 0.003385 0.004557
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763110887.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 高度重合 (IoU) (IoU: 0.9563, IoM: 1.0)
+  A 框: Line 2: [left_red] 6 0.417187 0.247721 0.065625 0.031901
+  B 框: Line 4: [left_yellow] 7 0.416406 0.247396 0.064062 0.031250
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763277188.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 嵌套包含 (IoM) (IoU: 0.8184, IoM: 0.9911)
+  A 框: Line 2: [left_green] 8 0.639393 0.061027 0.115348 0.060253
+  B 框: Line 3: [round_green] 2 0.630527 0.060609 0.131022 0.063761
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/train/image_1763108942.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 高度重合 (IoU) (IoU: 1.0, IoM: 1.0)
+  A 框: Line 2: [round_red] 0 0.491146 0.412760 0.008333 0.024740
+  B 框: Line 3: [left_yellow] 7 0.491146 0.412760 0.008333 0.024740
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/val/image_1763108935.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 高度重合 (IoU) (IoU: 1.0, IoM: 1.0)
+  A 框: Line 2: [round_red] 0 0.484115 0.394531 0.007812 0.022135
+  B 框: Line 3: [round_red] 0 0.484115 0.394531 0.007812 0.022135
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/val/image_1763111274.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 高度重合 (IoU) (IoU: 1.0, IoM: 1.0)
+  A 框: Line 5: [round_green] 2 0.893490 0.407878 0.021354 0.012370
+  B 框: Line 6: [right_green] 11 0.893490 0.407878 0.021354 0.012370
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/val/image_1763603998.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 高度重合 (IoU) (IoU: 0.9656, IoM: 0.9842)
+  A 框: Line 2: [round_green] 2 0.827865 0.236979 0.065104 0.033854
+  B 框: Line 3: [round_green] 2 0.828385 0.236654 0.066146 0.033203
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/val/image_1753787644.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 嵌套包含 (IoM) (IoU: 0.15, IoM: 1.0)
+  A 框: Line 3: [round_yellow] 1 0.524219 0.483724 0.004167 0.009766
+  B 框: Line 4: [round_green] 2 0.524349 0.486654 0.002344 0.002604
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/val/image_1763110415.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 高度重合 (IoU) (IoU: 1.0, IoM: 1.0)
+  A 框: Line 3: [left_green] 8 0.509635 0.395182 0.022396 0.011719
+  B 框: Line 4: [left_green] 8 0.509635 0.395182 0.022396 0.011719
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/val/image_1755936146.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 嵌套包含 (IoM) (IoU: 0.225, IoM: 1.0)
+  A 框: Line 2: [round_green] 2 0.504167 0.477865 0.007292 0.003255
+  B 框: Line 5: [round_yellow] 1 0.503776 0.478027 0.001823 0.002930
+  --- 冲突对 #2 ---
+  🚨 冲突类型: 嵌套包含 (IoM) (IoU: 0.2593, IoM: 1.0)
+  A 框: Line 3: [round_green] 2 0.515495 0.477702 0.007031 0.002930
+  B 框: Line 4: [round_yellow] 1 0.515234 0.477702 0.002344 0.002279
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/val/image_1763603638.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 高度重合 (IoU) (IoU: 0.9616, IoM: 1.0)
+  A 框: Line 2: [round_red] 0 0.506771 0.340495 0.026042 0.016927
+  B 框: Line 3: [round_yellow] 1 0.506771 0.340495 0.027083 0.016927
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/val/image_1763277353.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 高度重合 (IoU) (IoU: 0.9587, IoM: 0.9903)
+  A 框: Line 2: [round_green] 2 0.467448 0.277344 0.053646 0.028646
+  B 框: Line 3: [left_green] 8 0.466927 0.277669 0.053646 0.027995
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/val/image_1763107226.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 高度重合 (IoU) (IoU: 1.0, IoM: 1.0)
+  A 框: Line 2: [round_red] 0 0.552865 0.393555 0.019271 0.009766
+  B 框: Line 3: [round_red] 0 0.552865 0.393555 0.019271 0.009766
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/val/image_1755831064.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 嵌套包含 (IoM) (IoU: 0.223, IoM: 0.9999)
+  A 框: Line 3: [round_green] 2 0.744792 0.455241 0.012500 0.005534
+  B 框: Line 4: [round_green] 2 0.744141 0.454752 0.003385 0.004557
+
+========================================
+📁 发现冲突文件: /home/jzyh/xbzl/traffic_light/data_v1_filtered/labels/val/image_1763111648.txt
+  --- 冲突对 #1 ---
+  🚨 冲突类型: 高度重合 (IoU) (IoU: 0.9454, IoM: 1.0)
+  A 框: Line 4: [round_green] 2 0.544271 0.317708 0.040625 0.020833
+  B 框: Line 6: [left_green] 8 0.544271 0.318034 0.041667 0.021484
