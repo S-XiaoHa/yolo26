@@ -7,7 +7,7 @@ from my_trainer import DualTaskTrainer
 
 if __name__ == '__main__':
 	# model = YOLO("./ultralytics/cfg/models/26/yolo26s.yaml")
-    model = YOLO("yolo26s.pt")
+    model = YOLO("runs/detect/26s/train/exp/weights/epoch50.pt")
     data = "./data/mydata_dual.yaml"
 	# 如何切换模型版本, 上面的ymal文件可以改为 yolov11s.yaml就是使用的v11s,
 	# 类似某个改进的yaml文件名称为yolov11-XXX.yaml那么如果想使用其它版本就把上面的名称改为yolov11l-XXX.yaml即可（改的是上面YOLO中间的名字不是配置文件的）！
@@ -28,7 +28,7 @@ if __name__ == '__main__':
 	            # batch=-1,
                 batch=16,
 	            pretrained=True,
-	            patience=50,
+	            patience=0,
 	            cos_lr=True,
 	            save_period=5,
 	            val=True,   #培训期间不 验证/测试
@@ -80,7 +80,7 @@ if __name__ == '__main__':
                 multi_scale=0.0, # 1% 的概率在每个 epoch 随机调整输入图像大小，增强模型对不同分辨率的适应能力
 	            optimizer='MuSGD',  # using SGD 优化器 默认为auto建议大家使用固定的.
 	            
-                resume=False,
+                resume=True,
                 # resume=, # 续训的话这里填写True, yaml文件的地方改为lats.pt的地址,需要注意的是如果你设置训练200轮次模型训练了200轮次是没有办法进行续训的.
 	            amp=True,  # 如果出现训练损失为Nan可以关闭amp
 	            project='26s/train',

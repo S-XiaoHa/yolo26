@@ -14,14 +14,14 @@ from my_trainer import DualTaskTrainer
 
 
 if __name__ == "__main__":
-    model = YOLO("/home/jzyh/code/ultralytics/runs/detect/26m/train1/exp3/weights/epoch60.pt")
+    model = YOLO("yolo26m.pt")
 
     model.train(
         data="./data/mydata_dual.yaml",
         task="detect",
         end2end=True,
         cache="disk",
-        epochs=170,
+        epochs=150,
         imgsz=1920,
         seed=24,
         single_cls=False,
@@ -37,7 +37,7 @@ if __name__ == "__main__":
         device="0,1,2,3",
         # Augmentation
         # mosaic=0.392,
-        mosaic=0.3,
+        mosaic=0.28,
         mixup=0.01,
         cutmix=0.00082,
         copy_paste=0.0,
@@ -59,11 +59,11 @@ if __name__ == "__main__":
         # Optimizer / LR
         weight_decay=0.00027,
         # warmup_epochs=0.99,
-        warmup_epochs=0.99,
+        warmup_epochs=1.99,
         warmup_momentum=0.54064,
         warmup_bias_lr=0.05684,
         # lr0=0.00038,
-        lr0=0.00098,           # 从 0.00038 提升，给随机初始化的分类头足够的动力
+        lr0=0.001,           # 从 0.00038 提升，给随机初始化的分类头足够的动力
         # lrf=0.882,
         lrf=0.2,            
         momentum=0.948,
