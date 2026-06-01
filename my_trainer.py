@@ -41,74 +41,12 @@ class DualTaskTrainer(DetectionTrainer):
     NC_SHAPE = 5
     EX_NC = 3
 
-    # def get_model(self, cfg=None, weights=None, verbose=True):
-    #     model = super().get_model(cfg, weights, verbose)
-    #     old_head = model.model[-1]
-    #     if not isinstance(old_head, Detect):
-    #         raise TypeError(f"Expected a Detect-like head, got {type(old_head).__name__}.")
-
-    #     # Resume / fine-tune from an already-dual-task checkpoint: keep the existing head.
-    #     if isinstance(old_head, Detect26):
-    #         model.nc = self.NC_SHAPE
-    #         model.ex_nc = self.EX_NC
-    #         _install_dual_task_criterion(model)
-    #         return model
-
-    #     # Extract per-level input channels from the original box-regression branch.
-    #     ch = tuple(layer[0].conv.in_channels for layer in old_head.cv2)
-    #     end2end = bool(getattr(old_head, "end2end", False))
-    #     reg_max = int(getattr(old_head, "reg_max", 1))
-
-    #     new_head = Detect26(
-    #         nc=self.NC_SHAPE,
-    #         ex_nc=self.EX_NC,
-    #         reg_max=reg_max,
-    #         end2end=end2end,
-    #         ch=ch,
-    #     )
-
-    #     # 1) Preserve parse_model metadata so the model's forward routing still works.
-    #     new_head.i = old_head.i
-    #     new_head.f = old_head.f
-    #     new_head.type = type(new_head).__name__
-
-    #     # 2) Carry over stride (set by build_strides in DetectionModel.__init__).
-    #     new_head.stride = old_head.stride.clone()
-    #     new_head.training = old_head.training
-
-    #     # 3) Transfer pretrained box-regression weights (same architecture as old Detect).
-    #     try:
-    #         new_head.cv2.load_state_dict(old_head.cv2.state_dict())
-    #         if end2end and hasattr(old_head, "one2one_cv2") and hasattr(new_head, "one2one_cv2"):
-    #             new_head.one2one_cv2.load_state_dict(old_head.one2one_cv2.state_dict())
-    #     except Exception as exc:  # shape mismatch -> keep random init, just log it
-    #         print(f"[DualTaskTrainer] Skipped cv2 weight transfer: {exc}")
-
-    #     # 4) Match the device/dtype of the rest of the model.
-    #     new_head = new_head.to(next(old_head.parameters()).device)
-
-    #     model.model[-1] = new_head
-    #     # Refresh parameter count cache for nice info() print.
-    #     new_head.np = sum(p.numel() for p in new_head.parameters())
-
-    #     # 5) Initialise biases now that stride is set on the new head.
-    #     new_head.bias_init()
-
-    #     # 6) Wire in dual-task loss and refresh top-level model attributes.
-    #     model.nc = self.NC_SHAPE
-    #     model.ex_nc = self.EX_NC
-    #     model.yaml["nc"] = self.NC_SHAPE
-    #     model.yaml["ex_nc"] = self.EX_NC
-    #     _install_dual_task_criterion(model)
-
-    #     return model
-
     def get_model(self, cfg=None, weights=None, verbose=True):
         # 1. 确保 cfg 是字典格式，以便我们可以安全地读取和动态修改它
         if isinstance(cfg, str):
             from ultralytics.nn.tasks import yaml_model_load
             cfg = yaml_model_load(cfg)
-            
+
         # 2. 动态改写：如果检测到配置中的最后一层是单头 "Detect"
         # 自动将其改写为双头 "Detect26"，并传入对应的 [NC_SHAPE, EX_NC] 两个分类维度。
         # 这确保了 super().get_model 刚实例化模型时，就已经天然是双头 Detect26 结构！
@@ -119,7 +57,7 @@ class DualTaskTrainer(DetectionTrainer):
         # 3. 临时将 self.data["nc"] 覆盖修改为 5 (NC_SHAPE)，使分类维度和权重加载对齐
         orig_nc = self.data.get("nc", 15)
         self.data["nc"] = self.NC_SHAPE
-        
+
         try:
             model = super().get_model(cfg, weights, verbose)
         finally:
@@ -188,4 +126,3 @@ class DualTaskTrainer(DetectionTrainer):
         self.model.ex_nc = self.EX_NC
         # The criterion may have been stripped on resume; re-install just in case.
         _install_dual_task_criterion(self.model)
-        
