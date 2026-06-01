@@ -2,7 +2,7 @@ from ultralytics import YOLO
 
 if __name__ == '__main__':
     # 1. 加载你训练好的最优权重 
-    model = YOLO("runs/detect/26m/train/exp/weights/epoch55.pt")
+    model = YOLO("runs/detect/26s/train/exp/weights/best.pt")
 
     # 2. 执行导出
     success = model.export(

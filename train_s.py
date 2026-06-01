@@ -17,7 +17,7 @@ if __name__ == '__main__':
 	            task='detect',
                 end2end=True, # 是否使用端到端训练
 				cache="disk",# 将所有图片缓存到 RAM 中。极大提升训练速度，但极其消耗内存
-                epochs=170,
+                epochs=150,
 	            # imgsz=640,
                 # imgsz=[1536, 1920],
                 imgsz=1920, # 关键提升：针对红绿灯小目标，必须拉高分辨率 

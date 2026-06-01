@@ -1860,19 +1860,39 @@ class Detect26(Detect):
         )
         return preds
 
-    def _inference(self, x: dict[str, torch.Tensor]) -> torch.Tensor:
-        """Decode boxes and produce the combined ``nc * ex_nc`` class scores for inference.
+    # def _inference(self, x: dict[str, torch.Tensor]) -> torch.Tensor:
+    #     """Decode boxes and produce the combined ``nc * ex_nc`` class scores for inference.
 
-        Shape and color branches are treated as independent classifiers; their per-anchor
-        probabilities are combined via outer product so that downstream NMS / postprocess
-        can rank the full ``nc * ex_nc`` joint classes (e.g. 5 shapes x 3 colors = 15).
+    #     Shape and color branches are treated as independent classifiers; their per-anchor
+    #     probabilities are combined via outer product so that downstream NMS / postprocess
+    #     can rank the full ``nc * ex_nc`` joint classes (e.g. 5 shapes x 3 colors = 15).
+    #     """
+    #     dbox = self._get_decode_boxes(x)
+    #     bs = x["scores"].shape[0]
+    #     shape_p = x["scores"].sigmoid()  # (B, nc, A)
+    #     color_p = x["scores_ex"].sigmoid()  # (B, ex_nc, A)
+    #     # Combined index = shape_idx * ex_nc + color_idx -> (B, nc*ex_nc, A)
+    #     combined = (shape_p.unsqueeze(2) * color_p.unsqueeze(1)).reshape(bs, self.nc * self.ex_nc, -1)
+    #     return torch.cat((dbox, combined), 1)
+    def _inference(self, x: dict[str, torch.Tensor]) -> torch.Tensor:
+        """A-plan-1: use shape_p as the detection confidence, pick color by argmax.
+
+        Joint 15-class score keeps the shape-branch magnitude instead of collapsing
+        via shape_p * color_p, so confidences stay at single-head levels.
         """
         dbox = self._get_decode_boxes(x)
         bs = x["scores"].shape[0]
-        shape_p = x["scores"].sigmoid()  # (B, nc, A)
-        color_p = x["scores_ex"].sigmoid()  # (B, ex_nc, A)
-        # Combined index = shape_idx * ex_nc + color_idx -> (B, nc*ex_nc, A)
-        combined = (shape_p.unsqueeze(2) * color_p.unsqueeze(1)).reshape(bs, self.nc * self.ex_nc, -1)
+        shape_p = x["scores"].sigmoid()        # (B, nc, A)
+        color_p = x["scores_ex"].sigmoid()     # (B, ex_nc, A)
+
+        # Hard one-hot gate on the winning color; keep shape_p magnitude.
+        # color_idx = color_p.argmax(dim=1, keepdim=True)                     # (B, 1, A)
+        # color_gate = torch.zeros_like(color_p).scatter_(1, color_idx, 1.0)  # (B, ex_nc, A)
+        # 替代 color_idx + scatter 两行：
+        color_gate = (color_p >= color_p.amax(dim=1, keepdim=True)).to(color_p.dtype)  # (B, ex_nc, A)
+
+        # combined[(s,c)] = shape_p[s] if c == argmax_color else 0  -> (B, nc*ex_nc, A)
+        combined = (shape_p.unsqueeze(2) * color_gate.unsqueeze(1)).reshape(bs, self.nc * self.ex_nc, -1)
         return torch.cat((dbox, combined), 1)
 
     def postprocess(self, preds: torch.Tensor) -> torch.Tensor:

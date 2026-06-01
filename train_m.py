@@ -8,7 +8,6 @@ v8DetectionLoss26 and is wired into the model via init_criterion monkey-patching
 
 from ultralytics import YOLO
 
-
 # 加上这一句导入您的自定义 Trainer
 from my_trainer import DualTaskTrainer
 
@@ -21,7 +20,7 @@ if __name__ == "__main__":
         task="detect",
         end2end=True,
         cache="disk",
-        epochs=150,
+        epochs=130,
         imgsz=1920,
         seed=24,
         single_cls=False,
@@ -29,7 +28,7 @@ if __name__ == "__main__":
         profile=False,
         batch=8,
         pretrained=True,
-        patience=50,
+        patience=0,
         cos_lr=True,
         save_period=5,
         val=True,
@@ -38,7 +37,7 @@ if __name__ == "__main__":
         # Augmentation
         # mosaic=0.392,
         mosaic=0.28,
-        mixup=0.01,
+        mixup=0.005,
         cutmix=0.00082,
         copy_paste=0.0,
         # scale=0.3,
@@ -69,7 +68,7 @@ if __name__ == "__main__":
         momentum=0.948,
         shear=0.0,
         degrees=0.0,
-        close_mosaic=20,
+        close_mosaic=15,
         multi_scale=0.0,
         optimizer="MuSGD",
         resume=False,
